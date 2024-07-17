@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import Image from "next/image";
 import Link from "next/link";
 import { LoggedInButton } from "../auth/LoggedInButton";
-// import { ModeToggle } from "../theme/ModeToggle";
+import { ModeToggle } from "../theme/ModeToggle";
 
 export const Header = async () => {
   return (
@@ -17,7 +17,7 @@ export const Header = async () => {
           />
         </Link>
         <div className="flex items-center gap-2">
-          {/* <ModeToggle /> */}
+          <ModeToggle />
           <LoggedInButton />
         </div>
       </Layout>
