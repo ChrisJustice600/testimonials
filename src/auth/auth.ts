@@ -5,6 +5,9 @@ import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
+  theme: {
+    logo: "/icon-title.png",
+  },
   providers: [
     Google({
       clientId: env.GOOGLE_CLIENT_ID,

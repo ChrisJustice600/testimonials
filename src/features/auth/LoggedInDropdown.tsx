@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { LogOut } from "lucide-react";
 import { PropsWithChildren } from "react";
 import { singOutAction } from "./auth.action";
 
@@ -16,14 +17,13 @@ export const LoggedInDropdown = (props: LoggedInDropdownProps) => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>{props.children}</DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem asChild>
-          <button
-            onClick={async () => {
-              singOutAction();
-            }}
-          >
-            Logout
-          </button>
+        <DropdownMenuItem
+          onClick={async () => {
+            singOutAction();
+          }}
+        >
+          <LogOut size="16" className="mr-2" />
+          Logout
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
